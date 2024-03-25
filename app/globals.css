@@ -2,32 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.nav{
+  @apply flex w-[100%];
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navtitle{
+  @apply text-2xl font-bold;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.footerHead {
+  @apply font-semibold mt-5;
+  font-family: "Helvetica Neue";
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.homepage{
+  /* background-image:url("../public/profile.jpg"); */
+}
+
+.banner{
+  @apply flex mt-12 px-10;
+  align-items: center;
+  justify-content: center;
+}
+
+.bannerText{
+  @apply flex;
+}
+
+.bannerImage{
+  @apply flex w-1/4;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.bannerPort{
+  @apply flex items-center;
+  width: 94%;
+  margin: 0 auto;
+}
+
+.design{
+  @apply grid grid-cols-2 gap-3;
+  grid-template-columns: 5fr 6fr;
+}
+
+.photo{
+  @apply grid grid-cols-2 gap-3;
+  grid-template-columns: 6fr 5fr;
 }
